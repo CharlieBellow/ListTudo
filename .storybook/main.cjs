@@ -15,7 +15,7 @@ module.exports = {
 
 	viteFinal: (config, { configType }) => {
 		if (configType === "PRODUCTION") {
-			config.base = "ListTudo/";
+			config.base = "ListTudo/list-tudo/";
 		}
 
 		return config;
