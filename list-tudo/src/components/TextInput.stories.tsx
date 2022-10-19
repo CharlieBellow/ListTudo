@@ -1,6 +1,7 @@
 import {Meta, StoryObj} from '@storybook/react'
 import { TextInput, TextInputRootProps} from "./TextInput";
 import { FiCircle, FiMoreVertical, FiCheck, FiStar } from "react-icons/fi";
+import { Checkbox } from './Checkbox'
 
 //colocando propriedades padrão
 export default {
@@ -9,7 +10,7 @@ export default {
 	args: {
 		children: [
 			<TextInput.Icon>
-				<FiCircle />
+				<Checkbox />
 			</TextInput.Icon>,
 			<TextInput.Input placeholder="Próxima etapa" />
 		],
@@ -39,7 +40,7 @@ export const AddTask: StoryObj<TextInputRootProps> = {
 	args: {
 		children: [
 			<TextInput.Icon>
-				<FiCircle />
+				<FiCircle className="text-dark-div" />
 			</TextInput.Icon>,
 			<TextInput.Input placeholder="adicionar uma tarefa" />,
 			<TextInput.Icon>
@@ -53,7 +54,7 @@ export const Task: StoryObj<TextInputRootProps> = {
 	args: {
 		children: [
 			<TextInput.Icon>
-				<FiCircle />
+				<Checkbox className=""/>
 			</TextInput.Icon>,
 			<div className="flex w-full border-b-2 border-dark-actions py-2 bg-dark-background">
 				<TextInput.Input value="{task.name}"/>
@@ -70,7 +71,7 @@ export const SubTask: StoryObj<TextInputRootProps> = {
 	args: {
 		children: [
 			<TextInput.Icon className="h-full">
-				<FiCircle />
+				<Checkbox />
 			</TextInput.Icon>,
 			<div className="flex w-full border-b-2 border-dark-actions py-2 bg-dark-background">
 			<TextInput.Input value="{subtask.name}" />

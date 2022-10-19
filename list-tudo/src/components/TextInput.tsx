@@ -14,7 +14,7 @@ function TextInputRoot(props: TextInputRootProps) {
   
   return (
     <div
-    className={`flex items-center gap-2 px-1 h-full py-2 pl-2 focus-within:ring-2 ring-dark-actions w-full font-normal text-md ${ColorTheme}`}
+    className={`flex items-center gap-2 px-1 h-full py-2 pl-1 focus-within:ring-2 ring-dark-actions w-full font-normal text-md ${ColorTheme}`}
     >
       {props.children}
     </div>
