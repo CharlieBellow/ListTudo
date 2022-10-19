@@ -1,27 +1,25 @@
-
-
-import { FiCircle } from "react-icons/fi";
 import { Slot } from "@radix-ui/react-slot"
-import { ReactNode } from "react";
-
-
+import { InputHTMLAttributes, ReactNode } from "react";
 
 export interface TextInputRootProps {
   children: ReactNode;
-  //theme?: string;
+  theme: string;
 }
 
 function TextInputRoot(props: TextInputRootProps) {
-  //const ColorTheme =
-  //theme === "light"
-  //? "text-light-text bg-light-background"
-  //: "text-dark-text bg-dark-background"; /* aqui coloca as estilizações que mudam de acordo com o tema (dark/light) */
-  //
-	<div
-  className={`flex items-center gap-2 h-8 py-1 px-1 focus-within:ring-2 ring-dark-actions w-full font-normal text-md`}
-	>
-		{props.children}
-	</div>;
+  const ColorTheme =
+  props.theme === "light"
+  ? "text-light-text bg-light-background"
+  : "text-dark-text bg-dark-background"; /* aqui coloca as estilizações que mudam de acordo com o tema (dark/light) */
+  
+  return (
+    <div
+    className={`flex items-center gap-2 px-1 h-full py-2 pl-2 focus-within:ring-2 ring-dark-actions w-full font-normal text-md ${ColorTheme}`}
+    >
+      {props.children}
+    </div>
+
+  )
 }
 
 TextInputRoot.displayName = "TextInput.Root";
@@ -41,18 +39,18 @@ TextInputIcon.displayName = 'TextInput.Icon'
 
 export interface TextInputInputProps extends InputHTMLAttributes<HTMLInputElement> {
   
-	//theme?: string;
+	theme: string;
 }
 
 function TextInputInput(props: TextInputInputProps) {
-//	const ColorTheme =
-//		theme === "light"
-//			? "text-light-text bg-light-background"
-//			: "text-dark-text bg-dark-background"; /* aqui coloca as estilizações que mudam de acordo com o tema (dark/light) */
-//
+	const ColorTheme =
+		props.theme === "light"
+			? "text-light-text bg-light-background"
+			: "text-dark-text bg-dark-background"; /* aqui coloca as estilizações que mudam de acordo com o tema (dark/light) */
+
 	return (
 		<input
-			className={`flex-1 placeholder:text-dark-actions outline-none`}
+			className={`flex-1 placeholder:text-dark-actions outline-none ${ColorTheme}`}
 			{...props}
 		/>
 	);

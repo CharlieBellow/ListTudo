@@ -9,3 +9,4 @@ Tecnologias usadas:
 - Storybook;
 - Design System;
 - Figma;
+- React-icons
