@@ -8,9 +8,10 @@ export interface HeadingProps {
 	children: ReactNode;
 	asChild?: boolean;
 	theme?: string;
+	className?: string
 }
 
-export function Heading({ weight = "mdi", children, asChild, theme }: HeadingProps) {
+export function Heading({ weight = "mdi", children, asChild, theme, className }: HeadingProps) {
 	const Comp = asChild ? Slot : "span";
 	//por padrão o tema vai ser dark, se colocar light ele muda..
 	const ColorTheme = theme === "light" ? "text-light-text" : "text-dark-text";
@@ -21,7 +22,9 @@ export function Heading({ weight = "mdi", children, asChild, theme }: HeadingPro
 				"font-light": weight === "reg",
 				"font-medium": weight === "mdi",
 				"font-bold": weight === "bld",
-			})}
+			},
+				className
+			)}
 		>
 			{children}
 		</Comp>

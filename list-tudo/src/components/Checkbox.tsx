@@ -5,7 +5,7 @@ import {FiCheck} from 'react-icons/fi'
 export interface CheckboxProps {
   theme?: string;
   //sizeIcon?: Number;
-  sizeBox?: string
+  sizeBox?: string;
 }
 
 export function Checkbox(props: CheckboxProps) {

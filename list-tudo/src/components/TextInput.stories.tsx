@@ -39,13 +39,17 @@ export const InputWithoutIcon: StoryObj<TextInputRootProps> = {
 export const AddTask: StoryObj<TextInputRootProps> = {
 	args: {
 		children: [
-			<TextInput.Icon>
-				<FiCircle className="text-dark-div" />
-			</TextInput.Icon>,
-			<TextInput.Input placeholder="adicionar uma tarefa" theme=""/>,
-			<TextInput.Icon>
-				<FiCheck className="gap-2" />
-			</TextInput.Icon>,
+			<TextInput.Root>
+				<TextInput.Icon>
+					<Checkbox />
+				</TextInput.Icon>
+				<div className="flex w-full border-b-2 border-dark-actions py-2 bg-dark-background">
+					<TextInput.Input value="{subtask.name}" theme="" />
+					<TextInput.Icon>
+						<FiMoreVertical className="gap-2" />
+					</TextInput.Icon>
+				</div>
+			</TextInput.Root>,
 		],
 	},
 };
@@ -53,16 +57,18 @@ export const AddTask: StoryObj<TextInputRootProps> = {
 export const Task: StoryObj<TextInputRootProps> = {
 	args: {
 		children: [
-			<TextInput.Icon>
-				<Checkbox />
-			</TextInput.Icon>,
-			<div className="flex w-full border-b-2 border-dark-actions py-2 bg-dark-background">
-				<TextInput.Input value="{task.name}" theme=""/>
+			<TextInput.Root>
 				<TextInput.Icon>
-					<FiStar className="gap-2" />
-				</TextInput.Icon>
-
+					<Checkbox />
+				</TextInput.Icon>,
+				<div className="flex w-full border-b-2 border-dark-actions py-2 bg-dark-background">
+					<TextInput.Input value="{task.name}" theme=""/>
+					<TextInput.Icon>
+						<FiStar className="gap-2" />
+					</TextInput.Icon>
 			</div>
+			</TextInput.Root>
+
 		],
 	},
 };
@@ -70,6 +76,7 @@ export const Task: StoryObj<TextInputRootProps> = {
 export const SubTask: StoryObj<TextInputRootProps> = {
 	args: {
 		children: [
+			<TextInput.Root>
 			<TextInput.Icon>
 				<Checkbox />
 			</TextInput.Icon>,
@@ -79,6 +86,8 @@ export const SubTask: StoryObj<TextInputRootProps> = {
 				<FiMoreVertical className="gap-2" />
 				</TextInput.Icon>
 			</div>
+
+			</TextInput.Root>
 				
 		],
 	},
