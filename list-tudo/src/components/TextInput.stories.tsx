@@ -12,7 +12,7 @@ export default {
 			<TextInput.Icon>
 				<Checkbox />
 			</TextInput.Icon>,
-			<TextInput.Input placeholder="Próxima etapa" />
+			<TextInput.Input placeholder="Próxima etapa" theme=""/>
 		],
 	},
 	argTypes: {
@@ -30,7 +30,7 @@ export const AddSubTask: StoryObj<TextInputRootProps> = {};
 
 export const InputWithoutIcon: StoryObj<TextInputRootProps> = {
 	args: {
-		children: <TextInput.Input placeholder="Insira o título da lista" />,
+		children: <TextInput.Input placeholder="Insira o título da lista" theme=""/>,
 	},
 };
 
@@ -42,7 +42,7 @@ export const AddTask: StoryObj<TextInputRootProps> = {
 			<TextInput.Icon>
 				<FiCircle className="text-dark-div" />
 			</TextInput.Icon>,
-			<TextInput.Input placeholder="adicionar uma tarefa" />,
+			<TextInput.Input placeholder="adicionar uma tarefa" theme=""/>,
 			<TextInput.Icon>
 				<FiCheck className="gap-2" />
 			</TextInput.Icon>,
@@ -54,10 +54,10 @@ export const Task: StoryObj<TextInputRootProps> = {
 	args: {
 		children: [
 			<TextInput.Icon>
-				<Checkbox className=""/>
+				<Checkbox />
 			</TextInput.Icon>,
 			<div className="flex w-full border-b-2 border-dark-actions py-2 bg-dark-background">
-				<TextInput.Input value="{task.name}"/>
+				<TextInput.Input value="{task.name}" theme=""/>
 				<TextInput.Icon>
 					<FiStar className="gap-2" />
 				</TextInput.Icon>
@@ -70,11 +70,11 @@ export const Task: StoryObj<TextInputRootProps> = {
 export const SubTask: StoryObj<TextInputRootProps> = {
 	args: {
 		children: [
-			<TextInput.Icon className="h-full">
+			<TextInput.Icon>
 				<Checkbox />
 			</TextInput.Icon>,
 			<div className="flex w-full border-b-2 border-dark-actions py-2 bg-dark-background">
-			<TextInput.Input value="{subtask.name}" />
+			<TextInput.Input value="{subtask.name}" theme=""/>
 			<TextInput.Icon>
 				<FiMoreVertical className="gap-2" />
 				</TextInput.Icon>

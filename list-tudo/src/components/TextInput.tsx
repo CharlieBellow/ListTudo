@@ -3,7 +3,7 @@ import { InputHTMLAttributes, ReactNode } from "react";
 
 export interface TextInputRootProps {
   children: ReactNode;
-  theme: string;
+  theme?: string;
 }
 
 function TextInputRoot(props: TextInputRootProps) {
