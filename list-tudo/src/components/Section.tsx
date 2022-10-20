@@ -54,7 +54,7 @@ function SectionInput(props: SectionInputProps) {
 		<div className="flex flex-row items-center w-full text-pink-light ">
 			<hr className="items-center text-pink-light bg-pink-light w-full flex-auto" />
 			<p
-				className={` placeholder:text-dark-actions outline-none ${ColorTheme}  w-full items-center text-pink-light  `}
+				className={` placeholder:text-dark-actions outline-none ${ColorTheme}  w-full items-center text-pink-light text-center `}
 				{...props}
 			>
 				SESSÃO 1
