@@ -18,3 +18,5 @@ Tecnologias usadas:
   * Fix Bugs:
 
 - por alguma razão o checkbox está com a largura diferente e quando clica ele altera um pouco, tem que corrigi isso
+
+

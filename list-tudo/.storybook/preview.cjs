@@ -1,7 +1,14 @@
 //aqui importa tudo que vai para o preview
-
+import {initialize, mswDecorator} from 'msw-storybook-addon'
 import { themes } from '@storybook/theming'
 import '../src/styles/global.css'
+
+initialize({
+  onUnhandledRequest:'bypass'
+});
+
+export const decorators = [mswDecorator]
+
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
